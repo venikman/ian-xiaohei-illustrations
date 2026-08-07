@@ -224,6 +224,10 @@ The skill's flow:
 │   │   ├── 02-sort-by-purpose.png
 │   │   └── ...
 │   └── prompts.md
+├── site/                  ← showcase page, auto-deployed to Vercel
+│   ├── index.html
+│   ├── favicon.svg
+│   └── og-image.png
 └── skills/
     └── ian-xiaohei-illustrations/
         ├── SKILL.md
@@ -241,7 +245,7 @@ The skill's flow:
 
 The skill itself is the subdirectory `skills/ian-xiaohei-illustrations/` — that's what gets installed (the Claude Code plugin picks it up automatically; for Codex you copy it manually).
 
-The root-level README, LICENSE, NOTICE, examples, and plugin manifests are GitHub-facing packaging.
+The root-level README, LICENSE, NOTICE, examples, and plugin manifests are GitHub-facing packaging. The `site/` directory is the showcase page — pushes to `main` auto-deploy it to [xiaohei-illustrations.vercel.app](https://xiaohei-illustrations.vercel.app).
 
 ---
 
