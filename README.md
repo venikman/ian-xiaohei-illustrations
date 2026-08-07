@@ -140,6 +140,8 @@ mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
 cp -R ./skills/ian-xiaohei-illustrations "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
+All three methods install the complete skill, including the style-calibration images in `assets/examples/` — no extra step needed.
+
 After installing, use it in Codex:
 
 ```text
