@@ -1,83 +1,83 @@
 # Prompt Examples
 
-下面这些 prompt 可以直接复制到 Codex 里使用。
+Copy these prompts straight into Codex and use them as-is.
 
-## 只做配图规划
+## Illustration planning only
 
 ```text
-Use $ian-xiaohei-illustrations 先不要生图。
-请分析下面这篇文章哪里值得配图，输出 5 张左右的 shot list。
-每张图写清楚：
-- 放在哪个段落后
-- 图的主题
-- 核心意思
-- 结构类型
-- 小黑在图里做什么
-- 建议元素
-- 建议中文标注词
+Use $ian-xiaohei-illustrations No image generation yet.
+Analyze the article below for the spots worth illustrating and output a shot list of roughly 5 shots.
+For each shot, spell out:
+- Which paragraph it goes after
+- Theme
+- Core idea
+- Structure type
+- What Xiaohei does in the image
+- Suggested elements
+- Suggested labels
 
-<粘贴文章>
+<paste article>
 ```
 
-## 文章正文配图
+## In-article illustrations
 
 ```text
-Use $ian-xiaohei-illustrations 把下面这篇文章生成 4 张小黑怪诞正文配图。
-要求：16:9 横版、纯白背景、黑色手绘线稿、少量红橙蓝中文手写批注。
-每张图只讲一个核心结构，不要做 PPT 信息图，不要可爱卡通。
+Use $ian-xiaohei-illustrations Generate 4 absurd Xiaohei in-article illustrations for the article below.
+Requirements: 16:9 landscape, pure white background, black hand-drawn line art, a few red/orange/blue handwritten annotations (in the article's language).
+One core structure per image. No PPT infographics. No cute cartoons.
 
-<粘贴文章>
+<paste article>
 ```
 
-## 长文配图策略
+## Long-form illustration strategy
 
 ```text
-Use $ian-xiaohei-illustrations 给这篇长文做配图策略。
-不要平均配图，只挑认知锚点：核心判断、输入输出闭环、前后对比、常见坑、承接路径。
-默认 6-8 张，先输出 shot list，不要生成图片。
+Use $ian-xiaohei-illustrations Build an illustration strategy for this long-form article.
+Don't spread illustrations evenly - pick only cognitive anchors: core judgments, input-output loops, before-after contrasts, common pitfalls, handoff paths.
+Default to 6-8 shots. Output the shot list first - do not generate images.
 
-<粘贴文章>
+<paste article>
 ```
 
-## 单个观点生成一张图
+## One image from a single idea
 
 ```text
-Use $ian-xiaohei-illustrations 为这个观点生成一张 16:9 正文配图：
+Use $ian-xiaohei-illustrations Generate one 16:9 in-article illustration for this idea:
 
-信任不是喊出来的，而是一块证据一块证据铺过去。
+Trust isn't shouted into existence — it's laid down one piece of evidence at a time.
 
-画面要怪诞但清爽，小黑必须承担核心动作。
-中文标注最多 5 个，短一点。
+Make it absurd but clean. Xiaohei must carry the core action.
+At most 5 labels, and keep them short.
 ```
 
-## 工作流主题
+## Workflow theme
 
 ```text
-Use $ian-xiaohei-illustrations 为“把一条原始素材加工成流量、信任、转化三种内容”生成一张图。
-不要画正式流程图，不要复刻一鱼多吃旧案例。
-请重新发明一个新的低科技隐喻，让小黑参与核心动作。
+Use $ian-xiaohei-illustrations Generate one image for "turning one piece of raw material into three kinds of content: traffic, trust, and conversion".
+Don't draw a formal flowchart. Don't recreate the old One Fish, Many Uses example.
+Invent a brand-new low-tech metaphor and put Xiaohei in the core action.
 ```
 
-## 改图：去掉标题
+## Edit: remove the title
 
 ```text
-Use $ian-xiaohei-illustrations 帮我编辑这张图。
-去掉左上角的“Workflow / 流程图”标题和下划线，其他内容保持不变。
-不要新增任何文字或物件。
+Use $ian-xiaohei-illustrations Edit this image for me.
+Remove the "Workflow" title and its underline in the top-left corner. Keep everything else unchanged.
+Do not add any new text or objects.
 ```
 
-## 改图：增强小黑参与感
+## Edit: make Xiaohei more involved
 
 ```text
-Use $ian-xiaohei-illustrations 这张图方向对，但小黑有点像装饰。
-请保持核心意思不变，重生成一版：让小黑成为真正推动结构运转的人。
-画面更怪一点，但仍然纯白、清爽、少字。
+Use $ian-xiaohei-illustrations This image is on the right track, but Xiaohei feels like decoration.
+Keep the core idea and regenerate: make Xiaohei the one actually driving the structure.
+Make it a bit more absurd, but still pure white, clean, and light on text.
 ```
 
-## 生成一组风格样片
+## Generate a set of style samples
 
 ```text
-Use $ian-xiaohei-illustrations 输出 5 个不同主题的小黑正文配图效果。
-主题分别覆盖：信息过载、产品验证、内容复利、一人公司、信任建立。
-每张单独生成，不要拼成一张。
+Use $ian-xiaohei-illustrations Output 5 sample Xiaohei in-article illustrations, each on a different theme.
+Themes: information overload, product validation, content compounding, one-person company, trust building.
+Generate each one separately - do not combine them into a single image.
 ```
