@@ -1,0 +1,7 @@
+{
+  "git": {
+    "deploymentEnabled": {
+      "english-docs": false
+    }
+  }
+}
