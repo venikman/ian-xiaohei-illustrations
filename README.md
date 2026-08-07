@@ -2,13 +2,17 @@
 
 > Turn the judgments, flows, states, and metaphors in your articles into white-background, hand-drawn, absurd-but-clean in-article illustrations.
 >
-> 16:9 landscape | Xiaohei IP | pure-white hand-drawn | sparse red/orange/blue annotations | Codex Skill
+> 16:9 landscape | Xiaohei IP | pure-white hand-drawn | sparse red/orange/blue annotations | Codex Skill + Claude Code Plugin
+
+---
+
+> **🌐 English edition.** This is the English translation of Ian's original [ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations), repackaged as a Claude Code plugin under the original MIT license. All credit for the skill, the style, and the Xiaohei IP goes to [Ian](https://github.com/helloianneo). 中文原版 → [helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations)
 
 ---
 
 ## What this repo is
 
-Ian Xiaohei Illustrations is a Codex Skill that guides an AI Agent to generate in-article illustrations for articles, posts, blogs, Notion docs, and methodology content (originally built for Chinese content).
+Ian Xiaohei Illustrations is an AI-agent skill (Codex Skill + Claude Code plugin) that guides an AI Agent to generate in-article illustrations for articles, posts, blogs, Notion docs, and methodology content (originally built for Chinese content).
 
 It is not a generic illustration prompt, and it is not a PPT infographic template. Its core goal: first understand the cognitive anchors in the article, then turn one judgment, flow, structure, state, or metaphor into a memorable 16:9 hand-drawn explainer image.
 
@@ -26,7 +30,7 @@ Especially good for:
 - People making knowledge content, methodology content, or AI workflow content
 - People who want to turn abstract judgments into concrete metaphors
 - People who want an illustration style that's lighter, weirder, and more personally recognizable than PPT infographics
-- People producing content with Codex who want one visual language they can reuse reliably
+- People producing content with Codex or Claude Code who want one visual language they can reuse reliably
 
 Not for:
 
@@ -110,18 +114,28 @@ These images are style-calibration samples, not composition templates. When you 
 
 ## Install
 
-Clone the repo:
+### Claude Code — as a plugin (recommended)
 
-```bash
-git clone https://github.com/helloianneo/ian-xiaohei-illustrations.git
-cd ian-xiaohei-illustrations
+```text
+/plugin marketplace add venikman/ian-xiaohei-illustrations
+/plugin install ian-xiaohei-illustrations@xiaohei
 ```
 
-Copy the skill into your Codex skills directory:
+### Claude Code — as a plain skill
 
 ```bash
+git clone https://github.com/venikman/ian-xiaohei-illustrations.git
+mkdir -p ~/.claude/skills
+cp -R ian-xiaohei-illustrations/skills/ian-xiaohei-illustrations ~/.claude/skills/
+```
+
+### Codex
+
+```bash
+git clone https://github.com/venikman/ian-xiaohei-illustrations.git
+cd ian-xiaohei-illustrations
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R ./ian-xiaohei-illustrations "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R ./skills/ian-xiaohei-illustrations "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
 After installing, use it in Codex:
@@ -129,6 +143,8 @@ After installing, use it in Codex:
 ```text
 Use $ian-xiaohei-illustrations to design and generate 5 absurd Xiaohei in-article illustrations for this article.
 ```
+
+In Claude Code, just ask for Xiaohei illustrations — the skill triggers on requests for absurd hand-drawn in-article illustrations, shot lists, or image edits. Note: generating the final images needs an image-generation tool (built into Codex; in Claude Code, connect any image-generation MCP).
 
 ---
 
@@ -193,6 +209,9 @@ The skill's flow:
 ├── README.md
 ├── LICENSE
 ├── NOTICE.md
+├── .claude-plugin/
+│   ├── plugin.json
+│   └── marketplace.json
 ├── assets/
 │   └── ian-wechat-qr.jpg
 ├── examples/
@@ -201,27 +220,24 @@ The skill's flow:
 │   │   ├── 02-sort-by-purpose.png
 │   │   └── ...
 │   └── prompts.md
-└── ian-xiaohei-illustrations/
-    ├── SKILL.md
-    ├── agents/
-    │   └── openai.yaml
-    ├── assets/
-    │   └── examples/
-    └── references/
-        ├── style-dna.md
-        ├── xiaohei-ip.md
-        ├── composition-patterns.md
-        ├── prompt-template.md
-        └── qa-checklist.md
+└── skills/
+    └── ian-xiaohei-illustrations/
+        ├── SKILL.md
+        ├── agents/
+        │   └── openai.yaml
+        ├── assets/
+        │   └── examples/
+        └── references/
+            ├── style-dna.md
+            ├── xiaohei-ip.md
+            ├── composition-patterns.md
+            ├── prompt-template.md
+            └── qa-checklist.md
 ```
 
-What you actually install into Codex is the subdirectory:
+The skill itself is the subdirectory `skills/ian-xiaohei-illustrations/` — that's what gets installed (the Claude Code plugin picks it up automatically; for Codex you copy it manually).
 
-```text
-ian-xiaohei-illustrations/
-```
-
-The root-level README, LICENSE, NOTICE, and examples are GitHub-facing docs.
+The root-level README, LICENSE, NOTICE, examples, and plugin manifests are GitHub-facing packaging.
 
 ---
 

@@ -1,0 +1,14 @@
+{
+  "name": "xiaohei",
+  "owner": {
+    "name": "venikman",
+    "url": "https://github.com/venikman"
+  },
+  "plugins": [
+    {
+      "name": "ian-xiaohei-illustrations",
+      "source": "./",
+      "description": "Absurd, clean, hand-drawn in-article illustrations with the Xiaohei IP (English edition of Ian's skill)."
+    }
+  ]
+}

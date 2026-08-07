@@ -11,3 +11,5 @@ Author links:
 - GitHub: <https://github.com/helloianneo>
 - Website: <https://www.ianneo.xyz/opc>
 - X/Twitter: <https://x.com/ianneo_ai>
+
+This repository (<https://github.com/venikman/ian-xiaohei-illustrations>) is the English translation of the original, maintained by venikman. The original Chinese repository is <https://github.com/helloianneo/ian-xiaohei-illustrations>.

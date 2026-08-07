@@ -51,7 +51,7 @@ Default is 4-8 images. Very short articles get 1-3; even long ones should rarely
 
 ### 3. Generate One at a Time
 
-If the user explicitly says "generate / output / make the images / generate them for me", don't stop to wait for confirmation; use the built-in `image_gen` to generate each image separately. Never combine multiple images into one.
+If the user explicitly says "generate / output / make the images / generate them for me", don't stop to wait for confirmation; use the available image-generation tool (Codex's built-in `image_gen`, or an image-generation MCP tool in Claude Code) to generate each image separately. Never combine multiple images into one.
 
 Each image tells exactly one core structure. The prompt must include:
 
