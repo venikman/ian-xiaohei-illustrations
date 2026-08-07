@@ -119,12 +119,15 @@ git clone https://github.com/helloianneo/ian-xiaohei-illustrations.git
 cd ian-xiaohei-illustrations
 ```
 
-Copy the skill into your Codex skills directory:
+Copy the **English skill** into your Codex skills directory, then add the style-calibration images from the original skill:
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R ./ian-xiaohei-illustrations "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R ./docs/en/skill/ian-xiaohei-illustrations "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R ./ian-xiaohei-illustrations/assets "${CODEX_HOME:-$HOME/.codex}/skills/ian-xiaohei-illustrations/"
 ```
+
+(This installs the English-language runtime — instructions, references, and prompts in English, with in-image labels following the article's language. To install the original Chinese skill instead, copy `./ian-xiaohei-illustrations`.)
 
 After installing, use it in Codex:
 
@@ -197,6 +200,11 @@ The skill's flow:
 ├── NOTICE.md
 ├── assets/
 │   └── ian-wechat-qr.jpg
+├── docs/
+│   └── en/
+│       ├── README.md
+│       ├── examples/prompts.md
+│       └── skill/ian-xiaohei-illustrations/   ← installable English skill
 ├── examples/
 │   ├── images/
 │   │   ├── 01-two-breakpoints.png
@@ -217,7 +225,13 @@ The skill's flow:
         └── qa-checklist.md
 ```
 
-What you actually install into Codex is the subdirectory:
+What you actually install into Codex is one skill directory — the English edition:
+
+```text
+docs/en/skill/ian-xiaohei-illustrations/
+```
+
+or the original Chinese edition:
 
 ```text
 ian-xiaohei-illustrations/
