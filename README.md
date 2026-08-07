@@ -4,8 +4,6 @@
 >
 > 16:9 landscape | Xiaohei IP | pure-white hand-drawn | sparse red/orange/blue annotations | Codex Skill + Claude Code Plugin
 
-**Live gallery and install guide:** [xiaohei-illustrations.vercel.app](https://xiaohei-illustrations.vercel.app)
-
 ---
 
 > **🌐 English edition.** This is the English translation of Ian's original [ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations), repackaged as a Claude Code plugin under the original MIT license. All credit for the skill, the style, and the Xiaohei IP goes to [Ian](https://github.com/helloianneo). 中文原版 → [helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations)
@@ -116,7 +114,15 @@ These images are style-calibration samples, not composition templates. When you 
 
 ## Install
 
-### Claude Code — as a plugin (recommended)
+### Any AI coding agent — open-plugin standard (recommended)
+
+```bash
+npx plugins add venikman/ian-xiaohei-illustrations
+```
+
+One command, works across Claude Code, OpenAI Codex, Cursor, GitHub Copilot, Grok Build, and Kimi Code ([open-plugin format](https://github.com/vercel-labs/plugins)).
+
+### Claude Code — as a plugin
 
 ```text
 /plugin marketplace add venikman/ian-xiaohei-illustrations
@@ -224,10 +230,6 @@ The skill's flow:
 │   │   ├── 02-sort-by-purpose.png
 │   │   └── ...
 │   └── prompts.md
-├── site/                  ← showcase page, auto-deployed to Vercel
-│   ├── index.html
-│   ├── favicon.svg
-│   └── og-image.png
 └── skills/
     └── ian-xiaohei-illustrations/
         ├── SKILL.md
@@ -245,7 +247,7 @@ The skill's flow:
 
 The skill itself is the subdirectory `skills/ian-xiaohei-illustrations/` — that's what gets installed (the Claude Code plugin picks it up automatically; for Codex you copy it manually).
 
-The root-level README, LICENSE, NOTICE, examples, and plugin manifests are GitHub-facing packaging. The `site/` directory is the showcase page — pushes to `main` auto-deploy it to [xiaohei-illustrations.vercel.app](https://xiaohei-illustrations.vercel.app).
+The root-level README, LICENSE, NOTICE, examples, and plugin manifests are GitHub-facing packaging.
 
 ---
 
