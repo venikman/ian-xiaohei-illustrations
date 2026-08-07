@@ -9,6 +9,7 @@ dist/
 # Local editor files
 .idea/
 .vscode/
+.vercel/
 
 # Logs
 *.log
