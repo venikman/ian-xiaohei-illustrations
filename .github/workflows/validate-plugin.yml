@@ -1,0 +1,35 @@
+name: Validate plugin
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install the pinned Claude Code validator
+        run: npm install --global @anthropic-ai/claude-code@2.1.223
+
+      - name: Validate the marketplace and plugin strictly
+        run: claude plugin validate --strict .
+
+      - name: Verify the release archive
+        run: |
+          git archive --format=zip HEAD --output=/tmp/ian-xiaohei-illustrations.zip
+          unzip -t /tmp/ian-xiaohei-illustrations.zip
+
+      - name: Verify the production install page
+        run: curl --fail --silent --show-error --retry 3 https://xiaohei-illustrations.vercel.app/ --output /dev/null

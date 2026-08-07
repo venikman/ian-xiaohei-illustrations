@@ -4,6 +4,8 @@
 >
 > 16:9 landscape | Xiaohei IP | pure-white hand-drawn | sparse red/orange/blue annotations | Codex Skill + Claude Code Plugin
 
+**Live gallery and install guide:** [xiaohei-illustrations.vercel.app](https://xiaohei-illustrations.vercel.app)
+
 ---
 
 > **🌐 English edition.** This is the English translation of Ian's original [ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations), repackaged as a Claude Code plugin under the original MIT license. All credit for the skill, the style, and the Xiaohei IP goes to [Ian](https://github.com/helloianneo). 中文原版 → [helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations)

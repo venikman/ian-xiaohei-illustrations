@@ -1,12 +1,12 @@
 {
   "name": "ian-xiaohei-illustrations",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate absurd, clean, hand-drawn in-article illustrations featuring the Xiaohei IP. English edition of Ian's original Codex skill.",
   "author": {
     "name": "venikman",
     "url": "https://github.com/venikman"
   },
-  "homepage": "https://github.com/venikman/ian-xiaohei-illustrations",
+  "homepage": "https://xiaohei-illustrations.vercel.app",
   "repository": "https://github.com/venikman/ian-xiaohei-illustrations",
   "license": "MIT",
   "keywords": [
